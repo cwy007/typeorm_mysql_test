@@ -6,12 +6,16 @@ export const AppDataSource = new DataSource({
     type: "mysql",
     host: "localhost",
     port: 3306,
-    username: "test",
-    password: "test",
-    database: "test",
+    username: "root",
+    password: "Cwy17824",
+    database: "practice",
     synchronize: true,
-    logging: false,
+    logging: true,
     entities: [User],
     migrations: [],
     subscribers: [],
+    connectorPackage: 'mysql2',
+    extra: {
+        authPlugin: 'sha256_password',
+    }
 })
