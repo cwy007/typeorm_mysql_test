@@ -16,6 +16,7 @@ export class IdCard {
 
   @JoinColumn()
   @OneToOne(() => User, {
+    cascade: true,
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
   })
