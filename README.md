@@ -1,5 +1,7 @@
 # Awesome Project Build with TypeORM
 
+`npx typeorm@0.3.17 init --name typeorm_mysql_test --database mysql`
+
 Steps to run this project:
 
 1. Run `npm i` command
@@ -34,3 +36,5 @@ Loaded users:  [ User { id: 1, firstName: 'Timber', lastName: 'Saw', age: 25 } ]
 Here you can setup and run express / fastify / any other framework.
 
 ```
+
+[typeorm](https://www.npmjs.com/package/typeorm)
