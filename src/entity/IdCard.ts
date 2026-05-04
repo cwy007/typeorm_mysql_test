@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm"
+import { User } from "./User";
 
 @Entity({
   name: 'id_card'
@@ -12,4 +13,11 @@ export class IdCard {
     comment: '身份证号码'
   })
   cardName: string;
+
+  @JoinColumn()
+  @OneToOne(() => User, {
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
+  })
+  user: User;
 }

@@ -46,3 +46,51 @@ Here you can setup and run express / fastify / any other framework.
 npm run typeorm schema:sync -- -d src/data-source.ts
 
 ```
+
+## npx typeorm --help
+
+```bash
+
+➜  typeorm_mysql_test git:(typeorm-relation-mapping) ✗ npx typeorm --help
+Usage: typeorm <command> [options]
+
+Commands:
+  typeorm schema:sync                Synchronizes your entities with database
+                                     schema. It runs schema update queries on
+                                     all connections you have. To run update
+                                     queries on a concrete connection use -c
+                                     option.
+  typeorm schema:log                 Shows sql to be executed by schema:sync
+                                     command. It shows sql log only for your
+                                     default dataSource. To run update queries
+                                     on a concrete connection use -c option.
+  typeorm schema:drop                Drops all tables in the database on your
+                                     default dataSource. To drop table of a
+                                     concrete connection's database use -c
+                                     option.
+  typeorm query [query]              Executes given SQL query on a default
+                                     dataSource. Specify connection name to run
+                                     query on a specific dataSource.
+  typeorm entity:create <path>       Generates a new entity.
+  typeorm subscriber:create <path>   Generates a new subscriber.
+  typeorm migration:create <path>    Creates a new migration file.
+  typeorm migration:generate <path>  Generates a new migration file with sql
+                                     needs to be executed to update schema.
+  typeorm migration:run              Runs all pending migrations.
+  typeorm migration:show             Show all migrations and whether they have
+                                     been run or not
+  typeorm migration:revert           Reverts last executed migration.
+  typeorm version                    Prints TypeORM version this project uses.
+  typeorm cache:clear                Clears all data stored in query runner
+                                     cache.
+  typeorm init                       Generates initial TypeORM project
+                                     structure. If name specified then creates
+                                     files inside directory called as name. If
+                                     its not specified then creates files inside
+                                     current directory.
+
+Options:
+  -h, --help     Show help                                             [boolean]
+  -v, --version  Show version number
+
+```
