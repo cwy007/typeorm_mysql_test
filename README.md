@@ -38,3 +38,11 @@ Here you can setup and run express / fastify / any other framework.
 ```
 
 [typeorm](https://www.npmjs.com/package/typeorm)
+
+## 同步新增的 entity 到database
+
+```bash
+
+npm run typeorm schema:sync -- -d src/data-source.ts
+
+```
